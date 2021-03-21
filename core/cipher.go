@@ -52,6 +52,7 @@ var streamList = map[string]struct {
 	KeySize int
 	New     func(key []byte) (shadowstream.Cipher, error)
 }{
+	"NONE":          {16, shadowstream.NONE},
 	"RC4-MD5":       {16, shadowstream.RC4MD5},
 	"AES-128-CTR":   {16, shadowstream.AESCTR},
 	"AES-192-CTR":   {24, shadowstream.AESCTR},
